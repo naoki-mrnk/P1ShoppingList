@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bci-Xg-t7m">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--P1ShoppingList-->
+        <scene sceneID="qdN-PP-vQd">
+            <objects>
+                <viewController id="6z2-zE-gG1" customClass="ShoppingListViewController" customModule="P1ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Isj-Wc-cwq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m0F-yQ-vlq">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShoppingListCell" id="iSW-Gl-ZOT">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iSW-Gl-ZOT" id="zIp-fo-tNx">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFk-p8-m5y">
+                                <rect key="frame" x="305" y="597" width="50" height="50"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.90980392156862744" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vCd-F9-Jwg"/>
+                                    <constraint firstAttribute="width" constant="50" id="w56-N9-3Y9"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedAddButton:" destination="6z2-zE-gG1" eventType="touchUpInside" id="xdb-KP-q0d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="m0F-yQ-vlq" firstAttribute="top" secondItem="FtA-P0-NPm" secondAttribute="top" id="61i-vb-eIi"/>
+                            <constraint firstItem="FtA-P0-NPm" firstAttribute="bottom" secondItem="m0F-yQ-vlq" secondAttribute="bottom" id="Dmv-i3-kO7"/>
+                            <constraint firstItem="m0F-yQ-vlq" firstAttribute="leading" secondItem="FtA-P0-NPm" secondAttribute="leading" id="HTp-9a-YtR"/>
+                            <constraint firstItem="FtA-P0-NPm" firstAttribute="bottom" secondItem="MFk-p8-m5y" secondAttribute="bottom" constant="20" id="R84-en-1RZ"/>
+                            <constraint firstItem="FtA-P0-NPm" firstAttribute="trailing" secondItem="MFk-p8-m5y" secondAttribute="trailing" constant="20" id="afO-Jf-GAq"/>
+                            <constraint firstItem="FtA-P0-NPm" firstAttribute="trailing" secondItem="m0F-yQ-vlq" secondAttribute="trailing" id="x87-iE-Nf9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FtA-P0-NPm"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="P1ShoppingList" id="9pD-WS-IE7"/>
+                    <connections>
+                        <outlet property="addButton" destination="MFk-p8-m5y" id="EGj-Xr-naY"/>
+                        <outlet property="shoppingListTableView" destination="m0F-yQ-vlq" id="6LR-n4-0RR"/>
+                        <segue destination="7du-4v-WA7" kind="show" identifier="toAddNewItem" id="CIt-Hc-db5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mz-M4-LtT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1040.8" y="54.422788605697157"/>
+        </scene>
+        <!--AddNewItem-->
+        <scene sceneID="sai-7M-fI5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddNewItem" id="7du-4v-WA7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RzC-ir-x99" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.5999999999999" y="53.973013493253376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="njW-To-MNr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bci-Xg-t7m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L2U-4X-M1o">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6z2-zE-gG1" kind="relationship" relationship="rootViewController" id="d4G-e7-3Ix"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cYT-vA-eHH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="54.422788605697157"/>
+        </scene>
+    </scenes>
+</document>
